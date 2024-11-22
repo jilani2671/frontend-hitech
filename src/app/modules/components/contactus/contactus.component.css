@@ -1,0 +1,75 @@
+/* Background Pattern */
+.absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  }
+  .from-blue-200 {
+    --tw-gradient-from: #bfdbfe;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 219, 254, 0));
+  }
+  .to-indigo-200 {
+    --tw-gradient-to: #c7d2fe;
+  }
+  .from-pink-200 {
+    --tw-gradient-from: #fbcfe8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(251, 207, 232, 0));
+  }
+  .to-purple-200 {
+    --tw-gradient-to: #e9d5ff;
+  }
+  .rounded-full {
+    border-radius: 9999px;
+  }
+  .opacity-30 {
+    opacity: 0.3;
+  }
+  .transform {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+  .rotate-45 {
+    --tw-rotate: 45deg;
+  }
+  .z-0 {
+    z-index: 0;
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  
+  /* Form Design */
+  input[type="text"], input[type="email"] {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  input[type="text"]:focus, input[type="email"]:focus {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque background on focus */
+    border-color: #60a5fa; /* Blue border on focus */
+  }
+  
+  label {
+    margin-bottom: 0.5rem; /* Spacing below labels */
+    font-weight: bold; /* Bold labels */
+  }
+  
+  button {
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+  }
+  
+  /* Social Icons Alignment */
+  form + .flex {
+    justify-content: center;
+    margin-top: 1.5rem;
+  }

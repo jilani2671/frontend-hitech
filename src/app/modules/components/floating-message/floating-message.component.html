@@ -1,0 +1,18 @@
+<div *ngIf="isMessageVisible" class="fixed bottom-10 right-10 bg-white shadow-lg rounded-lg p-2 max-w-xs">
+  <div class="flex justify-between items-center">
+    <p class="font-semibold text-sm">More Design?</p>
+    <button (click)="closeMessage()" class="text-gray-400 hover:text-gray-600 text-sm">
+      <span class="sr-only">Close</span>
+      &times;
+    </button>
+  </div>
+  <button (click)="toggleDropdown()" class="mt-2 w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-1 px-2 rounded text-sm">
+    Explore  
+  </button>
+  <div *ngIf="isDropdownVisible" class="mt-2 bg-white shadow-md rounded-lg p-2">
+    <ul>
+      <li class="text-sm py-1 hover:bg-gray-100 px-2 rounded cursor-pointer">TV Unit</li>
+      <li class="text-sm py-1 hover:bg-gray-100 px-2 rounded cursor-pointer">Sofa</li>
+    </ul>
+  </div>
+</div>

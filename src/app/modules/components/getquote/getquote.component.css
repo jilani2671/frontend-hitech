@@ -1,0 +1,73 @@
+.review-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+  font-family: Arial, sans-serif;
+}
+
+.illustration-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.form-section {
+  width: 45%;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section input,
+.form-section textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-section textarea {
+  height: 100px;
+  resize: none;
+}
+
+.note {
+  font-size: 14px;
+  color: #555;
+}
+
+.free-text {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  background: #ffcc00;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #ffb300;
+}

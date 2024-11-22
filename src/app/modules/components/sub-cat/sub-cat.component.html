@@ -1,0 +1,558 @@
+<app-navbar />
+
+
+
+
+<section class="max-w-12xl mx-auto py-10 px-4 sm:px-6 lg:px-8 bg-[#f4f4f4] mt-12">
+
+  <div class="container mx-auto ">
+    <!-- Title Section -->
+    <div class="text-center md:text-left md:ml-12 mb-6 mt-12">
+      <h2 class="text-4xl font-bold text-black animate__animated animate__fadeInLeft animate__delay-1s">
+        Living Room Design
+      </h2>
+      <p class="text-lg text-gray-600 animate__animated animate__fadeInLeft animate__delay-2s">
+        Crafting Spaces, Creating Stories
+      </p>
+    </div>
+
+    <!-- Category Buttons with Scroll -->
+    <div class="flex items-center justify-center mb-6">
+      <!-- Scroll Left Button -->
+      <button (click)="scrollLeft()" class="p-2 bg-gray-300 text-gray-700 rounded-full mr-2 transition-all duration-300 transform hover:scale-110">
+        &lt;
+      </button>
+
+      <!-- Scrollable Category Buttons Container -->
+      <div #scrollContainer class="flex overflow-x-auto gap-4 md:gap-6">
+        <button class="px-4 py-2 bg-gradient-to-br from-[#EB5976] to-[#EB5976] text-white font-semibold rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] animate__animated animate__fadeInLeft">
+          Living Room
+        </button>
+        <button class="px-4 py-2 bg-gradient-to-br from-[#EB5976] to-[#EB5976] text-white font-semibold border border-[#EB5976] rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] animate__animated animate__fadeInLeft animate__delay-1s">
+          Master Bedroom Design
+        </button>
+        <button class="px-4 py-2 bg-gradient-to-br from-[#EB5976] to-[#EB5976] text-white font-semibold border border-[#EB5976] rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] animate__animated animate__fadeInLeft animate__delay-2s">
+          Child Bedroom Design
+        </button>
+        <button class="px-4 py-2 bg-gradient-to-br from-[#EB5976] to-[#EB5976] text-white font-semibold border border-[#EB5976] rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] animate__animated animate__fadeInLeft animate__delay-3s">
+          Living Room
+        </button>
+        <button class="px-4 py-2 bg-gradient-to-br from-[#EB5976] to-[#EB5976] text-white font-semibold border border-[#EB5976] rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] animate__animated animate__fadeInLeft animate__delay-4s">
+          Living Room
+        </button>
+        
+        
+      </div>
+
+
+<!-- 
+      <button class="px-4 py-2 bg-gradient-to-br from-purple-600 to-blue-500 text-white font-semibold rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg animate__animated animate__fadeInLeft">
+        Living Room
+      </button>
+      <button class="px-4 py-2 bg-gradient-to-br from-purple-600 to-blue-500 text-white font-semibold border border-purple-300 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg animate__animated animate__fadeInLeft animate__delay-1s">
+        Master Bedroom Design
+      </button>
+      <button class="px-4 py-2 bg-gradient-to-br from-purple-600 to-blue-500 text-white font-semibold border border-purple-300 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg animate__animated animate__fadeInLeft animate__delay-2s">
+        Child Bedroom Design
+      </button>
+      <button class="px-4 py-2 bg-gradient-to-br from-purple-600 to-blue-500 text-white font-semibold border border-purple-300 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg animate__animated animate__fadeInLeft animate__delay-3s">
+        Living Room
+      </button>
+      <button class="px-4 py-2 bg-gradient-to-br from-purple-600 to-blue-500 text-white font-semibold border border-purple-300 rounded-lg transform transition duration-300 hover:scale-105 hover:shadow-lg animate__animated animate__fadeInLeft animate__delay-4s">
+        Living Room
+      </button> change the color of buttons to #EB5976 -->
+      <!-- Scroll Right Button -->
+      <button (click)="scrollRight()" class="p-2 bg-gray-300 text-gray-700 rounded-full ml-2 transition-all duration-300 transform hover:scale-110">
+        &gt;
+      </button>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex justify-center gap-4 mb-6 flex-wrap md:flex-row sm:flex-col">
+      <button class="px-4 py-2 bg-gradient-to-r from-[#EB5976] to-[#EB5976] text-white font-semibold border border-[#EB5976] rounded-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] focus:ring-4 focus:outline-none focus:ring-[#EB5976] dark:focus:ring-[#EB5976] transform transition duration-300 hover:scale-105 hover:shadow-xl animate__animated animate__fadeInUp animate__delay-1s">
+        TV Unit
+      </button>
+      <button class="px-4 py-2 bg-gradient-to-r from-[#EB5976] to-[#EB5976] text-white font-semibold border border-[#EB5976] rounded-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] focus:ring-4 focus:outline-none focus:ring-[#EB5976] dark:focus:ring-[#EB5976] transform transition duration-300 hover:scale-105 hover:shadow-xl animate__animated animate__fadeInUp animate__delay-2s">
+        Seating Arrangement
+      </button>
+      <button class="px-4 py-2 bg-gradient-to-r from-[#EB5976] to-[#EB5976] text-white font-semibold border border-[#EB5976] rounded-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] focus:ring-4 focus:outline-none focus:ring-[#EB5976] dark:focus:ring-[#EB5976] transform transition duration-300 hover:scale-105 hover:shadow-xl animate__animated animate__fadeInUp animate__delay-3s">
+        Showcase Cabinets
+      </button>
+      <button class="px-4 py-2 bg-gradient-to-r from-[#EB5976] to-[#EB5976] text-white font-semibold border border-[#EB5976] rounded-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] focus:ring-4 focus:outline-none focus:ring-[#EB5976] dark:focus:ring-[#EB5976] transform transition duration-300 hover:scale-105 hover:shadow-xl animate__animated animate__fadeInUp animate__delay-4s">
+        Shelves & Book Rakes
+      </button>
+      <button class="px-4 py-2 bg-gradient-to-r from-[#EB5976] to-[#EB5976] text-white font-semibold border border-[#EB5976] rounded-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] focus:ring-4 focus:outline-none focus:ring-[#EB5976] dark:focus:ring-[#EB5976] transform transition duration-300 hover:scale-105 hover:shadow-xl animate__animated animate__fadeInUp animate__delay-5s">
+        Center Table
+      </button>
+      <button class="px-4 py-2 bg-gradient-to-r from-[#EB5976] to-[#EB5976] text-white font-semibold border border-[#EB5976] rounded-lg hover:bg-gradient-to-l hover:from-[#F76D8C] hover:to-[#F76D8C] focus:ring-4 focus:outline-none focus:ring-[#EB5976] dark:focus:ring-[#EB5976] transform transition duration-300 hover:scale-105 hover:shadow-xl animate__animated animate__fadeInUp animate__delay-6s">
+        Sofa Cam Beds
+      </button>
+      
+      
+    </div>
+    
+  <div class="container mx-auto p-4">
+      <!-- Cards Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+      
+        <!-- Card Template -->
+       <!-- first -->
+       <div class="bg-white shadow-lg rounded-lg overflow-hidden w-full">
+        <img src="assets/client/beds.jpeg" alt="Living Room" class="w-full h-64 object-cover md:h-48 lg:h-56 xl:h-64">
+        <div class="p-4 md:p-6">
+          <h3 class="text-lg font-semibold mb-2">Bringing Dreams to Life</h3>
+          <div class="flex items-center justify-between mt-4">
+            <button class="px-4 py-2 bg-[#EB5976] text-white font-semibold rounded shadow-md hover:bg-[#F76D8C] transition ease-in-out duration-200 w-full sm:w-auto">
+              Get Quote
+            </button>
+            <div class="flex items-center ml-4" (click)="openReviewPopup()">
+              <!-- 5 stars -->
+              <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+              </svg>
+              <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+              </svg>
+              <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+              </svg>
+              <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- second -->
+<div class="bg-white shadow-lg rounded-lg overflow-hidden w-full">
+  <img src="assets/client/beds.jpeg" alt="Living Room" class="w-full h-64 object-cover md:h-48 lg:h-56 xl:h-64">
+  <div class="p-4 md:p-6">
+    <h3 class="text-lg font-semibold mb-2">Bringing Dreams to Life</h3>
+    <div class="flex items-center justify-between mt-4">
+      <button class="px-4 py-2 bg-[#EB5976] text-white font-semibold rounded shadow-md hover:bg-[#F76D8C] transition ease-in-out duration-200 w-full sm:w-auto">
+        Get Quote
+      </button>
+      <div class="flex items-center ml-4" (click)="openReviewPopup()">
+        <!-- 5 stars -->
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- third -->
+<div class="bg-white shadow-lg rounded-lg overflow-hidden w-full">
+  <img src="assets/client/beds.jpeg" alt="Living Room" class="w-full h-64 object-cover md:h-48 lg:h-56 xl:h-64">
+  <div class="p-4 md:p-6">
+    <h3 class="text-lg font-semibold mb-2">Bringing Dreams to Life</h3>
+    <div class="flex items-center justify-between mt-4">
+      <button class="px-4 py-2 bg-[#EB5976] text-white font-semibold rounded shadow-md hover:bg-[#F76D8C] transition ease-in-out duration-200 w-full sm:w-auto">
+        Get Quote
+      </button>
+      <div class="flex items-center ml-4" (click)="openReviewPopup()">
+        <!-- 5 stars -->
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- fourth -->
+<div class="bg-white shadow-lg rounded-lg overflow-hidden w-full">
+  <img src="assets/client/beds.jpeg" alt="Living Room" class="w-full h-64 object-cover md:h-48 lg:h-56 xl:h-64">
+  <div class="p-4 md:p-6">
+    <h3 class="text-lg font-semibold mb-2">Bringing Dreams to Life</h3>
+    <div class="flex items-center justify-between mt-4">
+      <button class="px-4 py-2 bg-[#EB5976] text-white font-semibold rounded shadow-md hover:bg-[#F76D8C] transition ease-in-out duration-200 w-full sm:w-auto">
+        Get Quote
+      </button>
+      <div class="flex items-center ml-4" (click)="openReviewPopup()">
+        <!-- 5 stars -->
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- fifth -->
+<div class="bg-white shadow-lg rounded-lg overflow-hidden w-full">
+  <img src="assets/client/beds.jpeg" alt="Living Room" class="w-full h-64 object-cover md:h-48 lg:h-56 xl:h-64">
+  <div class="p-4 md:p-6">
+    <h3 class="text-lg font-semibold mb-2">Bringing Dreams to Life</h3>
+    <div class="flex items-center justify-between mt-4">
+      <button class="px-4 py-2 bg-[#EB5976] text-white font-semibold rounded shadow-md hover:bg-[#F76D8C] transition ease-in-out duration-200 w-full sm:w-auto">
+        Get Quote
+      </button>
+      <div class="flex items-center ml-4" (click)="openReviewPopup()">
+        <!-- 5 stars -->
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- sixth -->
+<div class="bg-white shadow-lg rounded-lg overflow-hidden w-full">
+  <img src="assets/client/beds.jpeg" alt="Living Room" class="w-full h-64 object-cover md:h-48 lg:h-56 xl:h-64">
+  <div class="p-4 md:p-6">
+    <h3 class="text-lg font-semibold mb-2">Bringing Dreams to Life</h3>
+    <div class="flex items-center justify-between mt-4">
+      <button class="px-4 py-2 bg-[#EB5976] text-white font-semibold rounded shadow-md hover:bg-[#F76D8C] transition ease-in-out duration-200 w-full sm:w-auto">
+        Get Quote
+      </button>
+      <div class="flex items-center ml-4 " (click)="openReviewPopup()">
+        <!-- 5 stars -->
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- seventh -->
+<div class="bg-white shadow-lg rounded-lg overflow-hidden w-full">
+  <img src="assets/client/beds.jpeg" alt="Living Room" class="w-full h-64 object-cover md:h-48 lg:h-56 xl:h-64">
+  <div class="p-4 md:p-6">
+    <h3 class="text-lg font-semibold mb-2">Bringing Dreams to Life</h3>
+    <div class="flex items-center justify-between mt-4">
+      <button class="px-4 py-2 bg-[#EB5976] text-white font-semibold rounded shadow-md hover:bg-[#F76D8C] transition ease-in-out duration-200 w-full sm:w-auto">
+        Get Quote
+      </button>
+      <div class="flex items-center ml-4" (click)="openReviewPopup()">
+        <!-- 5 stars -->
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- eighth -->
+<div class="bg-white shadow-lg rounded-lg overflow-hidden w-full">
+  <img src="assets/client/beds.jpeg" alt="Living Room" class="w-full h-64 object-cover md:h-48 lg:h-56 xl:h-64">
+  <div class="p-4 md:p-6">
+    <h3 class="text-lg font-semibold mb-2">Bringing Dreams to Life</h3>
+    <div class="flex items-center justify-between mt-4">
+      <button class="px-4 py-2 bg-[#EB5976] text-white font-semibold rounded shadow-md hover:bg-[#F76D8C] transition ease-in-out duration-200 w-full sm:w-auto">
+        Get Quote
+      </button>
+      <div class="flex items-center ml-4"  (click)="openReviewPopup()">
+        <!-- 5 stars -->
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ninth -->
+<div class="bg-white shadow-lg rounded-lg overflow-hidden w-full">
+  <img src="assets/client/beds.jpeg" alt="Living Room" class="w-full h-64 object-cover md:h-48 lg:h-56 xl:h-64">
+  <div class="p-4 md:p-6">
+    <h3 class="text-lg font-semibold mb-2">Bringing Dreams to Life</h3>
+    <div class="flex items-center justify-between mt-4">
+      <button class="px-4 py-2 bg-[#EB5976] text-white font-semibold rounded shadow-md hover:bg-[#F76D8C] transition ease-in-out duration-200 w-full sm:w-auto">
+        Get Quote
+      </button>
+      <div class="flex items-center ml-4  "  (click)="openReviewPopup()">
+        <!-- 5 stars -->
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+        <svg class="w-5 h-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="white" stroke="grey" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 .587l3.668 7.431 8.332 1.209-6.038 5.882 1.43 8.326L12 18.905l-7.392 3.87 1.43-8.326-6.038-5.882 8.332-1.209z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="isPopupOpen" class="z-50">
+  <div
+    class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center transition-opacity duration-300 ease-in-out"
+    [ngClass]="{'opacity-100': isPopupOpen, 'opacity-0': !isPopupOpen}"
+    (click)="closeReviewPopup()"
+  >
+    <div
+      class="bg-white rounded-lg shadow-lg p-6 relative z-50 w-11/12 md:w-1/2 lg:w-1/3 transform transition-transform duration-300 ease-in-out"
+      [ngClass]="{'scale-100': isPopupOpen, 'scale-90': !isPopupOpen}"
+      (click)="$event.stopPropagation()"
+    >
+      <!-- Close Button -->
+      <button
+        class="absolute top-2 right-2 text-gray-500 hover:text-red-500"
+        (click)="closeReviewPopup()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      <!-- Title -->
+      <h2 class="text-lg font-bold mb-6 text-center">Add Review</h2>
+
+      <form>
+        <!-- Name Field -->
+        <div class="mb-4">
+          <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+
+        <!-- Address Field -->
+        <div class="mb-4">
+          <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            required
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+
+        <!-- Review Field -->
+        <div class="mb-4">
+          <label for="review" class="block text-sm font-medium text-gray-700">Review</label>
+          <textarea
+            id="review"
+            name="review"
+            required
+            class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <!-- Star Rating -->
+        <div class="mb-6">
+          <label class="block text-sm font-medium text-gray-700">Rating</label>
+          <div class="flex space-x-2 mt-2">
+            <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="w-6 h-6 cursor-pointer text-gray-300 hover:text-yellow-500 transition duration-150"
+                [ngClass]="{'text-yellow-500': rating >= star}"
+                (click)="setRating(star)"
+              >
+                <path
+                  d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                />
+              </svg>
+            </ng-container>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-end space-x-4">
+          <button
+            type="submit"
+            class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-150"
+          >
+            Submit
+          </button>
+          <button
+            type="button"
+            class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400 transition duration-150"
+            (click)="closeReviewPopup()"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-container>
+
+
+        <!-- Repeat more cards here up to 9 cards if needed -->
+      </div>
+      
+      <!-- Pagination -->
+      <!-- <div class="flex justify-center space-x-2 mt-6">
+        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition duration-150">Previous</button>
+        <button class="px-4 py-2 bg-yellow-400 text-black font-semibold rounded shadow-md hover:bg-yellow-500 transition duration-150">1</button>
+        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition duration-150">2</button>
+        <button class="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition duration-150">Next</button>
+      </div> -->
+       
+
+    <!-- <pagination> -->
+<div class="flex flex-col items-center z-0">
+  <!-- Help text -->
+  <span class="text-sm text-gray-700 dark:text-gray-400 z-0">
+    Showing <span class="font-semibold text-gray-900 dark:text-white">1</span> to 
+    <span class="font-semibold text-gray-900 dark:text-white">10</span> of 
+    <span class="font-semibold text-gray-900 dark:text-white">100</span> Entries
+  </span>
+
+  <div class="inline-flex mt-4 xs:mt-0 z-0">
+    <!-- Prev Button -->
+    <button 
+      class="flex items-center justify-center px-4 h-10 text-sm font-medium text-white 
+      bg-gradient-to-r from-[#EB5976] to-[#F76D8C] rounded-l-lg 
+      hover:bg-gradient-to-l shadow-lg 
+      dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 
+      dark:hover:text-white z-0">
+      <svg 
+        class="w-3.5 h-3.5 me-2 rtl:rotate-180" 
+        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path 
+          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+          stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
+      </svg>
+      Prev
+    </button>
+
+    <!-- Next Button -->
+    <button 
+      class="flex items-center justify-center px-4 h-10 text-sm font-medium text-white 
+      bg-gradient-to-r from-[#EB5976] to-[#F76D8C] rounded-r-lg 
+      hover:bg-gradient-to-l shadow-lg 
+      dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 
+      dark:hover:text-white z-0">
+      Next
+      <svg 
+        class="w-3.5 h-3.5 ms-2 rtl:rotate-180" 
+        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path 
+          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" 
+          stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+  </div>
+ 
+  </div>
+  <app-floating-message></app-floating-message>
+</section>
+
+<app-footer/>
